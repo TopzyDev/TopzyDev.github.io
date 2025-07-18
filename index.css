@@ -10,6 +10,7 @@ body {
     color: #333;
 }
 
+/* Navigation */
 nav {
     display: flex;
     justify-content: space-between;
@@ -27,22 +28,114 @@ nav {
     font-weight: 700;
 }
 
-nav ul {
+/* Hamburger Icon */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 110;
+}
+
+.hamburger {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #333;
+    position: relative;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background: #333;
+    transition: transform 0.3s ease;
+}
+
+.hamburger::before {
+    top: -8px;
+}
+
+.hamburger::after {
+    top: 8px;
+}
+
+/* Active state for hamburger (X shape) */
+.menu-toggle.active .hamburger {
+    background: transparent;
+}
+
+.menu-toggle.active .hamburger::before {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active .hamburger::after {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Off-Canvas Menu */
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu ul {
     list-style: none;
     display: flex;
     gap: 20px;
 }
 
-nav a {
+.nav-menu a {
     text-decoration: none;
     color: #333;
     font-weight: 400;
 }
 
-nav a:hover {
+.nav-menu a:hover,
+.nav-menu a.active {
     color: #007bff;
 }
 
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Hidden off-screen */
+        width: 250px;
+        height: 100vh;
+        background: #fff;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+        transition: right 0.3s ease;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-menu.active {
+        right: 0; /* Slide in */
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .nav-menu a {
+        font-size: 1.2em;
+    }
+}
+
+/* Existing styles from previous responses (e.g., .hero, .section, .portfolio-grid, etc.) remain unchanged */
 .hero {
     height: 100vh;
     display: flex;
