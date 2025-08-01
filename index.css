@@ -24,9 +24,70 @@ nav {
 }
 
 .logo {
-    font-size: 1.5em;
-    font-weight: 700;
+    display: flex;
+    align-items: center;
 }
+
+.logo-img {
+    height: 40px; /* Adjust based on your logo's dimensions */
+    width: auto;
+    max-width: 150px; /* Prevent logo from being too wide */
+    object-fit: contain;
+}
+
+/* Ensure hamburger and menu styles remain unchanged */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 110;
+}
+
+/* ... (rest of the existing nav styles, e.g., .hamburger, .nav-menu, etc., remain unchanged) */
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100vh;
+        background: #fff;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+        transition: right 0.3s ease;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .nav-menu a {
+        font-size: 1.2em;
+    }
+
+    .logo-img {
+        height: 30px; /* Smaller logo for mobile */
+        max-width: 120px;
+    }
+}
+
+/* Existing styles (e.g., .hero, .section, .portfolio-grid, etc.) remain unchanged */
 
 /* Hamburger Icon */
 .menu-toggle {
