@@ -29,10 +29,10 @@ nav {
 }
 
 .logo-img {
-    height: 80px; /* Larger logo for desktop */
-    width:190px;
-    max-width: 200px; /* Increased max-width */
-    object-fit: contain;
+    height: 90px; /* Larger logo for desktop */
+    width:auto;
+    max-width: 250px; /* Increased max-width */
+    object-fit: cover;
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3)); /* Bold shadow effect */
     transition: transform 0.3s ease, filter 0.3s ease; /* Smooth hover animation */
 }
