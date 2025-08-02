@@ -30,7 +30,7 @@ nav {
 
 .logo-img {
     height: 100px; /* Adjust based on your logo's dimensions */
-    width: auto;
+    width: 200px;
     max-width: 200px; /* Prevent logo from being too wide */
     object-fit: contain;
 }
