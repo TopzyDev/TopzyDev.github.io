@@ -31,8 +31,8 @@ nav {
 .logo-img {
     height: 300px; /* Adjust based on your logo's dimensions */
     width:auto;
-    max-width: 300px; /* Prevent logo from being too wide */
-    object-fit: contain;
+    max-width: 150px; /* Prevent logo from being too wide */
+    object-fit: cover;
 }
 
 /* Ensure hamburger and menu styles remain unchanged */
