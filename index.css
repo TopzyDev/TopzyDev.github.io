@@ -29,10 +29,10 @@ nav {
 }
 
 .logo-img {
-    height: 50px; /* Adjust based on your logo's dimensions */
+    height: 150px; /* Adjust based on your logo's dimensions */
     width:auto;
-    max-width:200px; /* Prevent logo from being too wide */
-    object-fit: cover;
+    max-width:2500px; /* Prevent logo from being too wide */
+    object-fit:cover;
 }
 
 /* Ensure hamburger and menu styles remain unchanged */
