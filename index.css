@@ -29,10 +29,17 @@ nav {
 }
 
 .logo-img {
-    height: 200px; /* Adjust based on your logo's dimensions */
-    width:300px;
-    max-width:300px; /* Prevent logo from being too wide */
-    object-fit:cover;
+    height: 60px; /* Larger logo for desktop */
+    width: auto;
+    max-width: 200px; /* Increased max-width */
+    object-fit: contain;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3)); /* Bold shadow effect */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Smooth hover animation */
+}
+
+.logo-img:hover {
+    transform: scale(1.1); /* Slight zoom on hover for bold effect */
+    filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.4)); /* Stronger shadow on hover */
 }
 
 /* Ensure hamburger and menu styles remain unchanged */
