@@ -29,9 +29,9 @@ nav {
 }
 
 .logo-img {
-    height: 100px; /* Adjust based on your logo's dimensions */
-    width: 200px;
-    max-width: 200px; /* Prevent logo from being too wide */
+    height: 250px; /* Adjust based on your logo's dimensions */
+    width: 400px;
+    max-width: 500px; /* Prevent logo from being too wide */
     object-fit: contain;
 }
 
