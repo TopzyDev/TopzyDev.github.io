@@ -29,8 +29,8 @@ nav {
 }
 
 .logo-img {
-    height: 60px; /* Larger logo for desktop */
-    width: auto;
+    height: 80px; /* Larger logo for desktop */
+    width:190px;
     max-width: 200px; /* Increased max-width */
     object-fit: contain;
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3)); /* Bold shadow effect */
