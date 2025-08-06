@@ -150,8 +150,8 @@ nav {
     }
 
     .logo-img {
-        height: 70px; /* Large logo for mobile */
-        max-width: 200px;
+        height: 90px; /* Large logo for mobile */
+        max-width: 250px;
         filter: drop-shadow(5px 5px 7px rgba(0, 0, 0, 0.5)); /* Strong shadow for bold effect */
         border: none; /* Remove border */
         border-radius: 0; /* Remove border-radius */
