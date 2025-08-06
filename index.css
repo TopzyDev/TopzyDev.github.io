@@ -15,7 +15,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 15px; /* Adjusted padding for larger logo on mobile */
+    padding: 10px 15px; /* Adjusted padding for large logo */
     background: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: sticky;
@@ -29,28 +29,26 @@ nav {
 }
 
 .logo-img {
-    height: 120px; /* Desktop size (unchanged from previous) */
-    width: 200px;
+    height: 80px; /* Large logo for desktop */
+    width: auto;
     max-width: 250px;
     object-fit: contain;
-    filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.4)); /*Stronger shadow bold effect */
+    filter: drop-shadow(5px 5px 7px rgba(0, 0, 0, 0.5)); /* Stronger shadow for bold effect */
     border: none; /* Remove border */
     border-radius: 0; /* Remove border-radius since border is gone */
-    transition: transform 0.3s ease, filter 0.3s ease, border-color 0.3s ease;
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .logo-img:hover {
-    transform: scale(1.15);
-    filter: drop-shadow(6px 6px 8px rgba(0, 0, 0, 0.5));
-    border-color: #0056b3;
+    transform: scale(1.15); /* Zoom on hover for bold impact */
+    filter: drop-shadow(7px 7px 9px rgba(0, 0, 0, 0.6)); /* Stronger shadow on hover */
 }
 
 /* Hamburger Icon (unchanged) */
 .menu-toggle {
     display: none;
     background: none;
-    border: 2px solid #007bff; /* Bold border */
-    border-radius: 5px;
+    border: none;
     cursor: pointer;
     z-index: 110;
 }
@@ -152,24 +150,15 @@ nav {
     }
 
     .logo-img {
-        height: 70px; /* Larger logo for mobile */
-        max-width: 200px; /* Increased for prominence */
-        filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.5)); /* Stronger shadow for bold effect */
-        border: 3px solid #007bff; /* Thicker border for mobile */
-        border-radius: 5px;
+        height: 70px; /* Large logo for mobile */
+        max-width: 200px;
+        filter: drop-shadow(5px 5px 7px rgba(0, 0, 0, 0.5)); /* Strong shadow for bold effect */
+        border: none; /* Remove border */
+        border-radius: 0; /* Remove border-radius */
     }
 }
 
 /* Existing styles (e.g., .hero, .section, .portfolio-grid, etc.) remain unchanged */
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    z-index: 110;
-}
-
-/* ... (rest of the existing nav styles, e.g., .hamburger, .nav-menu, etc., remain unchanged) */
 
 /* Mobile Styles */
 @media (max-width: 768px) {
