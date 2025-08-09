@@ -407,11 +407,33 @@ nav {
     margin-top: 20px;
 }
 
+/* Portfolio Item Image */
 .portfolio-item img {
-    width: 150%;
-    height: 250px;
-    object-fit: contain;
+    width: 100%;
+    height: auto; /* Respect image's aspect ratio */
+    object-fit: contain; /* Show full image without cropping */
     border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Bold shadow for Topzy-Dev aesthetic */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block; /* Ensure consistent rendering */
+}
+
+.portfolio-item img:hover {
+    transform: scale(1.05); /* Slight zoom for bold effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .portfolio-item img {
+        max-height: 300px; /* Cap height to prevent oversized images on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-item img {
+        max-height: 200px; /* Smaller cap for small mobile screens */
+    }
 }
 
 /* Portfolio Video */
