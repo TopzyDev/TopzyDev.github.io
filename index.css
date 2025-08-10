@@ -420,7 +420,11 @@ nav {
     margin-top: 40px;
     margin-bottom: 40px;
 }
-
+.spacer-div {
+      margin-top: 15px; /* Adds space above My Skills */
+      height: 20px;     /* Optional: give it a specific height */
+      background-color: transparent; /* Make it invisible */
+    }
 /* Skills Section */
 .skills-grid {
     display: grid;
