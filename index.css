@@ -421,7 +421,7 @@ nav {
     margin-bottom: 40px;
 }
 .spacer-div {
-      margin-top: 15px; /* Adds space above My Skills */
+      margin-top: 30px; /* Adds space above My Skills */
       height: 20px;     /* Optional: give it a specific height */
       background-color: transparent; /* Make it invisible */
     }
