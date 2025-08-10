@@ -11,18 +11,20 @@ body {
 }
 
 /* Navigation */
-nav {
+/* Header/Navbar Styles */
+.navbar {
+    position: fixed; /* Keep it fixed at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 15px; /* Adjusted padding for large logo */
-    background: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    background-color: transparent; /* Transparent background */
+    z-index: 1000; /* Ensure it stays above other content */
+    transition: background-color 0.3s ease; /* Smooth transition for hover/focus */
 }
-
 .logo {
     display: flex;
     align-items: center;
