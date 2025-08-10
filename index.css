@@ -25,6 +25,72 @@ body {
     z-index: 1000; /* Ensure it stays above other content */
     transition: background-color 0.3s ease; /* Smooth transition for hover/focus */
 }
+
+.navbar .logo-img {
+    height: 80px; /* Large logo for desktop */
+    transition: height 0.3s ease;
+}
+
+.navbar .nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .nav-links a {
+    color: #fff; /* White text for contrast against hero background */
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+    color: #007bff; /* Blue hover for Topzy-Dev branding */
+}
+
+.navbar .menu-toggle {
+    display: none; /* Hidden by default, shown on mobile */
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .navbar .logo-img {
+        height: 70px; /* Slightly smaller for tablets */
+    }
+
+    .navbar .nav-links {
+        display: none; /* Hidden for off-canvas on mobile */
+    }
+
+    .navbar .menu-toggle {
+        display: block; /* Show toggle on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar .logo-img {
+        height: 60px; /* Smaller for small mobile */
+    }
+}
+
+/* Optional: Add background on scroll for readability */
+@media (min-width: 769px) {
+    .navbar.scrolled {
+        background-color: rgba(255, 255, 255, 0.9); /* Slight white background when scrolled */
+    }
+
+    .navbar.scrolled .nav-links a {
+        color: #333; /* Dark text when scrolled */
+    }
+
+    .navbar.scrolled .nav-links a:hover {
+        color: #007bff;
+    }
+}
 .logo {
     display: flex;
     align-items: center;
