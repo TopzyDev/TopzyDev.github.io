@@ -314,7 +314,7 @@ nav {
 .hero {
     position: relative;
     width: 100%;
-    min-height: 150vh; /* Full viewport height */
+    min-height: 180vh; /* Full viewport height */
     background-image: url('images/photo_2025-08-10_12-48-48.jpg'); /* Replace with your image */
     background-size: cover; /* Cover the entire section, cropping excess */
     background-position: center; /* Center the image */
