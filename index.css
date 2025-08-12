@@ -346,6 +346,7 @@ nav {
 .cta-button {
     display: inline-block;
     padding: 12px 30px;
+    margin-top: 1.5em;
     background: #007bff; /* Blue for Topzy-Dev branding */
     color: #fff;
     text-decoration: none;
@@ -387,6 +388,7 @@ nav {
 
     .cta-button {
         padding: 10px 20px;
+        margin-top: 1.5em;
         font-size: 1em;
     }
 }
@@ -406,7 +408,8 @@ nav {
 
     .cta-button {
         padding: 8px 15px;
-        font-size: 1.5em;
+        margin-top: 1.5em;
+        font-size: 0.9em;
     }
 }
 .section {
@@ -568,6 +571,7 @@ input, textarea {
 
 button {
     padding: 10px;
+    margin-top: 1.5em;
     background: #007bff;
     color: #fff;
     border: none;
