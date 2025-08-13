@@ -994,3 +994,85 @@ nav a.active {
     color: #007bff;
     font-weight: 700;
 }
+
+/* Call to Action Section */
+#call-to-action {
+    padding: 60px 20px;
+    text-align: center;
+    background: #f8f9fa; /* Light background for contrast */
+    position: relative;
+    overflow: hidden;
+}
+
+.moving-text {
+    position: relative;
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.moving-text p {
+    display: inline-block;
+    font-size: 1.8em;
+    color: #0056b3; /* Blue for branding */
+    font-weight: 600;
+    padding: 10px 0;
+    animation: slide 15s linear infinite; /* Smooth sliding animation */
+}
+
+@keyframes slide {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Stable Button */
+.cta-button {
+    display: inline-block;
+    padding: 15px 35px;
+    background: #007bff; /* Blue button */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: 700;
+    position: relative; /* Stable positioning */
+    z-index: 1;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight zoom */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #call-to-action {
+        padding: 40px 15px;
+    }
+
+    .moving-text p {
+        font-size: 1.5em;
+    }
+
+    .cta-button {
+        padding: 12px 25px;
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 480px) {
+    #call-to-action {
+        padding: 30px 10px;
+    }
+
+    .moving-text p {
+        font-size: 1.2em;
+        animation: slide 12s linear infinite; /* Faster on mobile */
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}
