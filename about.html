@@ -9,19 +9,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="navbar">
-        <div class="logo">
-            <img src="images/3dlm0002-removebg-preview.png" alt="Topzy-Dev Logo" class="logo-img">
-        </div>
-        <nav class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="portfolio.html">Portfolio</a>
-            <a href="about.html">About Me</a>
-            <a href="#contact">Contact</a>
-            <button class="menu-toggle">☰</button>
-        </nav>
-    </header>
+    <!-- Navigation -->
+<nav>
+    <a href="index.html" class="logo">
+        <img src="images/3dlm0002-removebg-preview.png" alt="Topzy Dev Logo" class="logo-img">
+    </a>
+    <button class="menu-toggle" aria-label="Toggle Menu">
+        <span class="hamburger"></span>
+    </button>
+    <div class="nav-menu">
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="about.html">About</a> <!-- Updated to link to about.html --></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
 
     <!-- Hero Section -->
     <section class="hero-about">
