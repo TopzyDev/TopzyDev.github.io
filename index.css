@@ -429,20 +429,86 @@ nav {
     }
 
 /* About Me Hero Section */
-.hero-about {
-    position: relative;
+/* Header/Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    min-height: 80vh;
-    background-image: url('images/about-hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    padding: 15px 20px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    background-color: transparent;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.navbar .logo-img {
+    height: 80px; /* Large logo for desktop */
+    transition: height 0.3s ease;
+    border: none; /* No border as per your design */
+}
+
+.navbar .nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .nav-links a {
     color: #fff;
-    text-align: center;
-    overflow: hidden;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+    color: #007bff;
+}
+
+.navbar .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .navbar .logo-img {
+        height: 70px; /* Adjusted for tablets */
+    }
+
+    .navbar .nav-links {
+        display: none; /* Hidden for off-canvas */
+    }
+
+    .navbar .menu-toggle {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar .logo-img {
+        height: 60px; /* Smaller for mobile */
+    }
+}
+
+/* Optional Scrolled State */
+@media (min-width: 769px) {
+    .navbar.scrolled {
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    .navbar.scrolled .nav-links a {
+        color: #333;
+    }
+
+    .navbar.scrolled .nav-links a:hover {
+        color: #007bff;
+    }
 }
 
 .hero-about .hero-content {
