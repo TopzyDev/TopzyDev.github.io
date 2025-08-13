@@ -432,8 +432,8 @@ nav {
 .hero-about {
     position: relative;
     width: 100%;
-    min-height: 80vh;
-    background-image: url('images/about-hero-bg.jpg');
+    min-height: 85vh; /* Default height for desktop */
+    background-image: url('images/about-hero-bg.jpg'); /* Replace with your image */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -443,35 +443,50 @@ nav {
     color: #fff;
     text-align: center;
     overflow: hidden;
+    border-bottom: 5px solid #007bff; /* Blue accent */
 }
 
 .hero-about .hero-content {
     z-index: 1;
-    padding: 20px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1); /* Subtle tint */
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    max-width: 90%; /* Prevent overflow on mobile */
 }
 
 .hero-about .hero-photo {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%; /* Circular photo */
+    width: 250px; /* Default size */
+    height: 250px;
+    border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 20px;
-    border: 4px solid #fff; /* White border for contrast */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 25px;
+    border: 6px solid #00ddeb; /* Brighter blue border */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease;
+}
+
+.hero-about .hero-photo:hover {
+    transform: scale(1.1);
 }
 
 .hero-about h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
+    font-size: 3.5em;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .hero-about p {
-    font-size: 1.2em;
-    max-width: 600px;
-    margin: 0 auto 20px;
+    font-size: 1.3em;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+    font-style: italic;
 }
 
-/* Overlay for Readability */
+/* Overlay for a Warm Effect */
 .hero-about::before {
     content: '';
     position: absolute;
@@ -479,8 +494,68 @@ nav {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 123, 255, 0.3); /* Light blue overlay */
+    background: linear-gradient(135deg, rgba(0, 123, 255, 0.4), rgba(0, 221, 235, 0.3));
     z-index: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-about {
+        min-height: 65vh; /* Reduced for tablets */
+    }
+
+    .hero-about .hero-content {
+        padding: 20px;
+        max-width: 85%;
+    }
+
+    .hero-about .hero-photo {
+        width: 180px;
+        height: 180px;
+    }
+
+    .hero-about h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-about p {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-about {
+        min-height: 50vh; /* Further reduced for mobile */
+        padding: 10px 0; /* Add padding to avoid edge clipping */
+    }
+
+    .hero-about .hero-content {
+        padding: 15px;
+        max-width: 90%;
+        background: rgba(255, 255, 255, 0.15); /* Slightly more opaque for mobile */
+        border-radius: 10px;
+    }
+
+    .hero-about .hero-photo {
+        width: 140px; /* Smaller photo for mobile */
+        height: 140px;
+        margin-bottom: 15px;
+    }
+
+    .hero-about h1 {
+        font-size: 2em; /* More readable on small screens */
+        margin-bottom: 10px;
+    }
+
+    .hero-about p {
+        font-size: 1em; /* Adjusted for readability */
+        margin-bottom: 20px;
+        padding: 0 10px; /* Prevent text cutoff */
+    }
+
+    .hero-about::before {
+        background: linear-gradient(135deg, rgba(0, 123, 255, 0.5), rgba(0, 221, 235, 0.4)); /* Darker overlay for mobile */
+    }
 }
 
 /* CV Section */
