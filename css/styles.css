@@ -1,0 +1,153 @@
+/* About page */
+.hero-about {
+    position: relative;
+    width: 100%;
+    min-height: 80vh;
+    background-image: url('images/about-hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-about .hero-content {
+    z-index: 1;
+    padding: 20px;
+}
+
+.hero-about .hero-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* Circular photo */
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 4px solid #fff; /* White border for contrast */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero-about h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.hero-about p {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: 0 auto 20px;
+}
+
+/* Overlay for Readability */
+.hero-about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 123, 255, 0.3); /* Light blue overlay */
+    z-index: 0;
+}
+
+/* CV Section */
+#cv {
+    padding: 60px 20px;
+    text-align: center;
+    background: #f8f9fa;
+}
+
+#cv h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.cv-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.cv-column {
+    flex: 1;
+    text-align: left;
+}
+
+.cv-column h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #0056b3; /* Blue for branding */
+}
+
+.cv-item {
+    margin-bottom: 20px;
+}
+
+.cv-item h4 {
+    font-size: 1.3em;
+    margin-bottom: 5px;
+}
+
+.cv-item p {
+    font-size: 1em;
+    color: #666;
+    margin: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-about {
+        min-height: 60vh;
+    }
+
+    .hero-about .hero-photo {
+        width: 150px;
+        height: 150px;
+    }
+
+    .hero-about h1 {
+        font-size: 2.2em;
+    }
+
+    .hero-about p {
+        font-size: 1em;
+    }
+
+    .cv-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #cv h2 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-about {
+        min-height: 50vh;
+    }
+
+    .hero-about .hero-photo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .hero-about h1 {
+        font-size: 1.8em;
+    }
+
+    .hero-about p {
+        font-size: 0.9em;
+    }
+
+    #cv h2 {
+        font-size: 1.8em;
+    }
+}
