@@ -1076,3 +1076,61 @@ nav a.active {
         font-size: 1em;
     }
 }
+
+/* Footer Styles */
+.footer {
+    background: #f8f9fa;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.social-links {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-links a {
+    color: #0056b3;
+    font-size: 1.5em;
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #007bff;
+    transform: scale(1.2);
+}
+
+.social-links a i {
+    vertical-align: middle;
+}
+
+/* Responsive Adjustments for Footer */
+@media (max-width: 768px) {
+    .social-links {
+        gap: 10px;
+    }
+
+    .social-links a {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .social-links {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .social-links a {
+        font-size: 1em;
+    }
+}
