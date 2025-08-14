@@ -1070,7 +1070,7 @@ nav a.active {
     background: #f8f9fa;
     padding: 20px 0;
     text-align: center;
-    margin-top: 40px;
+    margin-top:0 10px;
 }
 
 .footer-content {
@@ -1098,7 +1098,7 @@ nav a.active {
 }
 
 .social-links a i {
-    vertical-align: middle;
+    horizontal-align: middle;
 }
 
 /* Responsive Adjustments for Footer */
@@ -1108,17 +1108,17 @@ nav a.active {
     }
 
     .social-links a {
-        font-size: 1.2em;
+        font-size: 1.7em;
     }
 }
 
 @media (max-width: 480px) {
     .social-links {
         flex-direction: column;
-        gap: 8px;
+        gap: 10px;
     }
 
     .social-links a {
-        font-size: 1em;
+        font-size: 1.7em;
     }
 }
