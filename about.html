@@ -74,12 +74,14 @@ From sleek landing pages to full-scale e-commerce sites, I combine creativity wi
     <section id="contact" class="section">
         <h2>Contact Me</h2>
         <p>Interested in working together? Let's connect!</p>
-        <form>
-            <input type="text" placeholder="Name" required>
-            <input type="email" placeholder="Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
+        <form id="contact-form" action="https://formsubmit.co/topzy0906@gmail.com" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+    <input type="hidden" name="_next" value="https://TopzyDev.github.io/thankyou.html">
+    <input type="hidden" name="_captcha" value="false">
+</form>
     </section>
 
    <!-- Footer -->
