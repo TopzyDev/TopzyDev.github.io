@@ -1102,7 +1102,7 @@ footer {
 .portfolio-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    gap: 40px; /* Default gap for desktop */
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -1129,7 +1129,7 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,140,225,255); /* Blue overlay on hover */
+    background: rgb(120, 196, 255);
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -1148,11 +1148,11 @@ footer {
 }
 
 .portfolio-item:hover img {
-    opacity: 0.3; /* Fade image on hover */
+    opacity: 0.3;
 }
 
 .portfolio-item:hover {
-    transform: scale(1.05); /* Slight zoom effect */
+    transform: scale(1.05);
 }
 
 .portfolio-overlay h3 {
@@ -1164,13 +1164,13 @@ footer {
 .portfolio-overlay p {
     font-size: 1em;
     margin-bottom: 15px;
-    color: #8ce1ff;
+    color: #e0e0e0;
 }
 
 .view-more {
     display: inline-block;
     padding: 10px 20px;
-    background: #00ddeb; /* Bright blue button */
+    background: #00ddeb;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -1179,7 +1179,7 @@ footer {
 }
 
 .view-more:hover {
-    background: #0099cc; /* Darker blue on hover */
+    background: #0099cc;
     transform: scale(1.1);
 }
 
@@ -1199,7 +1199,7 @@ footer {
 
     .portfolio-gallery {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
+        gap: 25px; /* Adjusted for tablets */
     }
 
     .portfolio-overlay h3 {
@@ -1230,8 +1230,8 @@ footer {
     }
 
     .portfolio-gallery {
-        grid-template-columns: 1fr; /* Single column on small mobile */
-        gap: 15px;
+        grid-template-columns: 1fr; /* Single column on mobile */
+        gap: 20px; /* Explicit gap for mobile */
     }
 
     .portfolio-overlay h3 {
