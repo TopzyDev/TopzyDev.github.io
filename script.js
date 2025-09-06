@@ -16,3 +16,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contact-form');
+    if (form) {
+        form.addEventListener('submit', (e) => {
+            const name = form.querySelector('input[name="name"]').value.trim();
+            const email = form.querySelector('input[name="email"]').value.trim();
+            const message = form.querySelector('textarea[name="message"]').value.trim();
+
+            if (!name  !email  !message) {
+                e.preventDefault();
+                alert('Please fill in all fields.');
+            } else if (!/^\S+@\S+\.\S+$/.test(email)) {
+                e.preventDefault();
+                alert('Please enter a valid email address.');
+            }
+        });
+    }
+});
