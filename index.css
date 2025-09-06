@@ -1199,7 +1199,7 @@ footer {
 
     .portfolio-gallery {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 25px; /* Adjusted for tablets */
+        gap: 30px; /* Adjusted for tablets */
     }
 
     .portfolio-overlay h3 {
@@ -1231,7 +1231,7 @@ footer {
 
     .portfolio-gallery {
         grid-template-columns: 1fr; /* Single column on mobile */
-        gap: 20px; /* Explicit gap for mobile */
+        gap: 35px; /* Explicit gap for mobile */
     }
 
     .portfolio-overlay h3 {
