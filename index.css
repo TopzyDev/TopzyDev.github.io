@@ -1648,7 +1648,7 @@ footer {
 /* Portfolio CTA Banner Section */
 #portfolio-cta {
     padding: 60px 20px;
-    background: linear-gradient(135deg, #00ddeb, #007bff); /* Colorful gradient */
+    background: linear-gradient(135deg, #ff6b6b, #4ecdc4); /* Red to teal */
     text-align: center;
     overflow: hidden;
     position: relative;
