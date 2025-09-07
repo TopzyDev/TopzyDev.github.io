@@ -48,3 +48,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+document.querySelector('.hero-video').addEventListener('mouseover', () => video.pause());
+document.querySelector('.hero-video').addEventListener('mouseout', () => video.play());
