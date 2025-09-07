@@ -1519,3 +1519,128 @@ footer {
         line-height: 1.2; /* Better vertical alignment */
     }
 }
+
+/* Testimonial Section */
+#testimonials {
+    padding: 60px 20px;
+    background: #f8f9fa;
+    text-align: center;
+}
+
+#testimonials h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#testimonials p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: #666;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.testimonial-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonial-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial-text {
+    font-size: 1em;
+    color: #444;
+    margin-bottom: 15px;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+.testimonial-author {
+    font-size: 1.2em;
+    color: #0056b3;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.testimonial-role {
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #testimonials {
+        padding: 40px 15px;
+    }
+
+    #testimonials h2 {
+        font-size: 2em;
+    }
+
+    #testimonials p {
+        font-size: 1em;
+    }
+
+    .testimonial-card {
+        width: 250px;
+        padding: 15px;
+    }
+
+    .testimonial-text {
+        font-size: 0.95em;
+    }
+
+    .testimonial-author {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 480px) {
+    #testimonials {
+        padding: 30px 10px;
+    }
+
+    #testimonials h2 {
+        font-size: 1.8em;
+    }
+
+    #testimonials p {
+        font-size: 0.9em;
+    }
+
+    .testimonial-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .testimonial-card {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .testimonial-text {
+        font-size: 0.9em;
+    }
+
+    .testimonial-author {
+        font-size: 1em;
+    }
+}
