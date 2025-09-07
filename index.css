@@ -1424,7 +1424,7 @@ footer {
 }
 
 .portfolio-item:hover .portfolio-overlay {
-    opacity: 0;
+    opacity: 0.3;
     transform: translateY(0);
 }
 
