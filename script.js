@@ -5,7 +5,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Fetch translations
     fetch('languages.json')
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) throw new Error('Network response was not ok');
+            return response.json();
+        })
         .then(data => {
             const translations = data;
 
@@ -13,21 +16,24 @@ document.addEventListener('DOMContentLoaded', () => {
             updateContent(currentLang);
 
             // Language change handler
-            langSelect.addEventListener('change', (e) => {
-                currentLang = e.target.value;
-                localStorage.setItem('language', currentLang);
-                updateContent(currentLang);
-            });
+            if (langSelect) {
+                langSelect.value = currentLang;
+                langSelect.addEventListener('change', (e) => {
+                    currentLang = e.target.value;
+                    localStorage.setItem('language', currentLang);
+                    updateContent(currentLang);
+                });
+            }
 
             function updateContent(lang) {
                 document.querySelectorAll('[data-key]').forEach(element => {
                     const key = element.getAttribute('data-key');
-                    element.textContent = translations[lang][key];
+                    element.textContent = translations[lang][key] || key; // Fallback to key if translation missing
                 });
 
                 document.querySelectorAll('[data-placeholder]').forEach(element => {
                     const key = element.getAttribute('data-placeholder');
-                    element.placeholder = translations[lang][key];
+                    element.placeholder = translations[lang][key] || key; // Fallback to key if translation missing
                 });
 
                 // Update document language for accessibility
@@ -36,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(error => console.error('Error loading languages:', error));
 
-    // Existing menu toggle logic
+    // Hamburger menu toggle logic
     const menuToggle = document.querySelector('.menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
 
@@ -52,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 menuToggle.classList.remove('active');
                 if (link.getAttribute('href').startsWith('#') && link.hostname === window.location.hostname) {
                     e.preventDefault();
-                    document.querySelector(link.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+                    document.querySelector(link.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
                 }
             });
         });
@@ -64,10 +70,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-});
 
-
-document.addEventListener('DOMContentLoaded', () => {
+    // Testimonial carousel logic
     const testimonials = document.querySelectorAll('.testimonial-card');
     let currentIndex = 0;
 
@@ -86,7 +90,11 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         testimonials.forEach(card => card.style.display = 'block');
     }
-});
 
-document.querySelector('.hero-video').addEventListener('mouseover', () => video.pause());
-document.querySelector('.hero-video').addEventListener('mouseout', () => video.play());
+    // Video interaction logic
+    const video = document.querySelector('.hero-video');
+    if (video) {
+        video.addEventListener('mouseover', () => video.pause());
+        video.addEventListener('mouseout', () => video.play());
+    }
+});
