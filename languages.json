@@ -1,0 +1,122 @@
+Franco Malachovski, [9/8/2025 2:28 AM]
+{
+    "en": {
+        "nav": {
+            "home": "Home",
+            "about": "About",
+            "portfolio": "Portfolio",
+            "contact": "Contact"
+        },
+        "hero": {
+            "title": "Welcome to Topzy Dev",
+            "subtitle": "Creative web solutions with a passion for innovation.",
+            "cta": "Explore My Work"
+        },
+        "portfolio": {
+            "title": "My Portfolio",
+            "subtitle": "Explore some of my best work, showcasing my skills in web design and development."
+        },
+        "testimonials": {
+            "title": "What Clients Say",
+            "subtitle": "Discover how my work has impacted others."
+        },
+        "portfolio-cta": {
+            "title": "Explore My Full Portfolio!",
+            "subtitle": "Check out more of my creative projects and innovative designs.",
+            "cta": "View Portfolio"
+        },
+        "contact": {
+            "title": "Contact Me",
+            "subtitle": "Get in touch for collaborations or inquiries.",
+            "form": {
+                "name": "Your Name",
+                "email": "Your Email",
+                "message": "Your Message",
+                "submit": "Send Message"
+            }
+        },
+        "footer": {
+            "copyright": "&copy; 2025 Topzy-Dev. All rights reserved."
+        }
+    },
+    "es": {
+        "nav": {
+            "home": "Inicio",
+            "about": "Acerca de",
+            "portfolio": "Portafolio",
+            "contact": "Contacto"
+        },
+        "hero": {
+            "title": "Bienvenido a Topzy Dev",
+            "subtitle": "Soluciones web creativas con pasión por la innovación.",
+            "cta": "Explora Mi Trabajo"
+        },
+        "portfolio": {
+            "title": "Mi Portafolio",
+            "subtitle": "Explora algunos de mis mejores trabajos, destacando mis habilidades en diseño y desarrollo web."
+        },
+        "testimonials": {
+            "title": "Lo que Dicen los Clientes",
+            "subtitle": "Descubre cómo mi trabajo ha impactado a otros."
+        },
+        "portfolio-cta": {
+            "title": "¡Explora Mi Portafolio Completo!",
+            "subtitle": "Descubre más de mis proyectos creativos e innovadores.",
+            "cta": "Ver Portafolio"
+        },
+        "contact": {
+            "title": "Contáctame",
+            "subtitle": "Ponte en contacto para colaboraciones o consultas.",
+            "form": {
+                "name": "Tu Nombre",
+                "email": "Tu Correo",
+                "message": "Tu Mensaje",
+                "submit": "Enviar Mensaje"
+            }
+        },
+        "footer": {
+            "copyright": "&copy; 2025 Topzy-Dev. Todos los derechos reservados."
+        }
+    },
+    "fr": {
+        "nav": {
+            "home": "Accueil",
+            "about": "À propos",
+            "portfolio": "Portefeuille",
+            "contact": "Contact"
+        },
+        "hero": {
+            "title": "Bienvenue chez Topzy Dev",
+            "subtitle": "Solutions web créatives avec une passion pour l'innovation.",
+            "cta": "Explorer Mon Travail"
+        },
+        "portfolio": {
+            "title": "Mon Portefeuille",
+            "subtitle": "Explorez certains de mes meilleurs travaux, mettant en valeur mes compétences en design et développement web."
+        },
+        "testimonials": {
+            "title": "Ce que les Clients Disent",
+            "subtitle": "Découvrez comment mon travail a impacté les autres."
+        },
+        "portfolio-cta": {
+            "title": "Explorez Mon Portefeuille Complet !",
+            "subtitle": "Découvrez plus de mes projets créatifs et innovants.",
+            "cta": "Voir le Portefeuille"
+        },
+        "contact": {
+            "title": "Contactez-moi",
+            "subtitle": "Contactez-moi pour des collaborations ou des demandes.",
+
+Franco Malachovski, [9/8/2025 2:28 AM]
+"form": {
+                "name": "Votre Nom",
+                "email": "Votre Email",
+                "message": "Votre Message",
+                "submit": "Envoyer le Message"
+            }
+        },
+        "footer": {
+            "copyright": "&copy; 2025 Topzy-Dev. Tous droits réservés."
+        }
+    }
+}
