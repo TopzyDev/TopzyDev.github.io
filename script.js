@@ -1,4 +1,48 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Language switcher logic
+    const langSelect = document.getElementById('lang-select');
+    let currentLang = localStorage.getItem('language') || 'en';
+
+    // Fetch translations
+    fetch('languages.json')
+        .then(response => {
+            if (!response.ok) throw new Error('Network response was not ok');
+            return response.json();
+        })
+        .then(data => {
+            const translations = data;
+
+            // Set initial language
+            updateContent(currentLang);
+
+            // Language change handler
+            if (langSelect) {
+                langSelect.value = currentLang;
+                langSelect.addEventListener('change', (e) => {
+                    currentLang = e.target.value;
+                    localStorage.setItem('language', currentLang);
+                    updateContent(currentLang);
+                });
+            }
+
+            function updateContent(lang) {
+                document.querySelectorAll('[data-key]').forEach(element => {
+                    const key = element.getAttribute('data-key');
+                    element.textContent = translations[lang][key] || key; // Fallback to key if translation missing
+                });
+
+                document.querySelectorAll('[data-placeholder]').forEach(element => {
+                    const key = element.getAttribute('data-placeholder');
+                    element.placeholder = translations[lang][key] || key; // Fallback to key if translation missing
+                });
+
+                // Update document language for accessibility
+                document.documentElement.lang = lang;
+            }
+        })
+        .catch(error => console.error('Error loading languages:', error));
+
+    // Hamburger menu toggle logic
     const menuToggle = document.querySelector('.menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
 
@@ -8,20 +52,17 @@ document.addEventListener('DOMContentLoaded', () => {
             menuToggle.classList.toggle('active');
         });
 
-        // Ensure links navigate correctly
         navMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', (e) => {
                 navMenu.classList.remove('active');
                 menuToggle.classList.remove('active');
-                // Prevent default only if it's a hash link on the same page
                 if (link.getAttribute('href').startsWith('#') && link.hostname === window.location.hostname) {
                     e.preventDefault();
-                    document.querySelector(link.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+                    document.querySelector(link.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
                 }
             });
         });
 
-        // Close menu when clicking outside on mobile
         document.addEventListener('click', (e) => {
             if (window.innerWidth <= 768 && !navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
                 navMenu.classList.remove('active');
@@ -29,9 +70,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-});
 
-document.addEventListener('DOMContentLoaded', () => {
+    // Testimonial carousel logic
     const testimonials = document.querySelectorAll('.testimonial-card');
     let currentIndex = 0;
 
@@ -50,7 +90,11 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         testimonials.forEach(card => card.style.display = 'block');
     }
-});
 
-document.querySelector('.hero-video').addEventListener('mouseover', () => video.pause());
-document.querySelector('.hero-video').addEventListener('mouseout', () => video.play());
+    // Video interaction logic
+    const video = document.querySelector('.hero-video');
+    if (video) {
+        video.addEventListener('mouseover', () => video.pause());
+        video.addEventListener('mouseout', () => video.play());
+    }
+});
