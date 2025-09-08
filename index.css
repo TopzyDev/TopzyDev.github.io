@@ -1904,3 +1904,51 @@ footer {
     z-index: 0;
 }
 .hero-content { z-index: 1; }
+
+/* Language Switcher */
+.lang-switcher {
+    margin-left: 20px;
+}
+
+.lang-switcher select {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    background: #fff;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.lang-switcher select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+@media (max-width: 768px) {
+    .lang-switcher {
+        margin-left: 10px;
+    }
+
+    .lang-switcher select {
+        padding: 4px 8px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-menu {
+        padding: 15px;
+    }
+
+    .lang-switcher {
+        margin: 10px 0 0;
+        width: 100%;
+    }
+
+    .lang-switcher select {
+        width: 100%;
+        padding: 6px;
+        font-size: 0.8em;
+    }
+}
