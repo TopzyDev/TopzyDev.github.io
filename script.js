@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(error => console.error('Error loading languages:', error));
 
-document.addEventListener('DOMContentLoaded', () => {
+    // Existing menu toggle logic
     const menuToggle = document.querySelector('.menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
 
@@ -46,22 +46,24 @@ document.addEventListener('DOMContentLoaded', () => {
             menuToggle.classList.toggle('active');
         });
 
-        // Close menu when clicking a link
         navMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
+            link.addEventListener('click', (e) => {
                 navMenu.classList.remove('active');
                 menuToggle.classList.remove('active');
+                if (link.getAttribute('href').startsWith('#') && link.hostname === window.location.hostname) {
+                    e.preventDefault();
+                    document.querySelector(link.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+                }
             });
         });
-    }
 
-    // Close menu when clicking outside on mobile
-    document.addEventListener('click', (e) => {
-        if (window.innerWidth <= 768 && !navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
-            navMenu.classList.remove('active');
-            menuToggle.classList.remove('active');
-        }
-    });
+        document.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768 && !navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+                navMenu.classList.remove('active');
+                menuToggle.classList.remove('active');
+            }
+        });
+    }
 });
 
 
