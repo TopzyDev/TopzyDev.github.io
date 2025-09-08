@@ -1,4 +1,42 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Language switcher logic
+    const langSelect = document.getElementById('lang-select');
+    let currentLang = localStorage.getItem('language') || 'en';
+
+    // Fetch translations
+    fetch('languages.json')
+        .then(response => response.json())
+        .then(data => {
+            const translations = data;
+
+            // Set initial language
+            updateContent(currentLang);
+
+            // Language change handler
+            langSelect.addEventListener('change', (e) => {
+                currentLang = e.target.value;
+                localStorage.setItem('language', currentLang);
+                updateContent(currentLang);
+            });
+
+            function updateContent(lang) {
+                document.querySelectorAll('[data-key]').forEach(element => {
+                    const key = element.getAttribute('data-key');
+                    element.textContent = translations[lang][key];
+                });
+
+                document.querySelectorAll('[data-placeholder]').forEach(element => {
+                    const key = element.getAttribute('data-placeholder');
+                    element.placeholder = translations[lang][key];
+                });
+
+                // Update document language for accessibility
+                document.documentElement.lang = lang;
+            }
+        })
+        .catch(error => console.error('Error loading languages:', error));
+
+document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.querySelector('.menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
 
