@@ -8,23 +8,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- Navigation with Language Switcher -->
     <nav>
-   <a href="index.html" class="logo">
-        <img src="images/3dlm0002-removebg-preview.png" alt="Topzy Dev Logo" class="logo-img">
-    </a>
-    <button class="menu-toggle" aria-label="Toggle Menu">
-        <span class="hamburger"></span>
-    </button>
-    <div class="nav-menu">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="index.html#about">About</a></li>
-            <li><a href="portfolio.html" class="active">Portfolio</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
-        </ul>
-    </div>
-</nav>
+        <a href="index.html" class="logo">
+            <img src="images/3dlm0002-removebg-preview.png" alt="Topzy Dev Logo" class="logo-img">
+        </a>
+        <button class="menu-toggle" aria-label="Toggle Menu">
+            <span class="hamburger"></span>
+        </button>
+        <div class="nav-menu">
+            <ul>
+                <li><a href="index.html" data-key="nav.home"></a></li>
+                <li><a href="about.html" data-key="nav.about" class="active"></a></li>
+                <li><a href="portfolio.html" data-key="nav.portfolio"></a></li>
+                <li><a href="index.html#contact" data-key="nav.contact"></a></li>
+            </ul>
+            <div class="lang-switcher">
+                <select id="lang-select">
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                    <option value="fr">Français</option>
+                </select>
+            </div>
+        </div>
+    </nav>
 
     <!-- Portfolio Section -->
     <section id="portfolio" class="section">
