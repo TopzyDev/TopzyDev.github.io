@@ -31,31 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    const testimonials = document.querySelectorAll('.testimonial-card');
-    let currentIndex = 0;
-
-    function showTestimonial(index) {
-        testimonials.forEach((card, i) => {
-            card.style.display = i === index ? 'block' : 'none';
-        });
-    }
-
-    if (testimonials.length > 1 && window.innerWidth <= 480) {
-        showTestimonial(currentIndex);
-        setInterval(() => {
-            currentIndex = (currentIndex + 1) % testimonials.length;
-            showTestimonial(currentIndex);
-        }, 5000); // Change every 5 seconds
-    } else {
-        testimonials.forEach(card => card.style.display = 'block');
-    }
-});
-
-document.querySelector('.hero-video').addEventListener('mouseover', () => video.pause());
-document.querySelector('.hero-video').addEventListener('mouseout', () => video.play());
-
-// Theme toggle logic
+         // Theme toggle logic
     const themeToggle = document.querySelector('.theme-toggle');
     const body = document.body;
     let currentTheme = localStorage.getItem('theme') || 'light';
@@ -82,3 +58,29 @@ document.querySelector('.hero-video').addEventListener('mouseout', () => video.p
         });
     }
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const testimonials = document.querySelectorAll('.testimonial-card');
+    let currentIndex = 0;
+
+    function showTestimonial(index) {
+        testimonials.forEach((card, i) => {
+            card.style.display = i === index ? 'block' : 'none';
+        });
+    }
+
+    if (testimonials.length > 1 && window.innerWidth <= 480) {
+        showTestimonial(currentIndex);
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % testimonials.length;
+            showTestimonial(currentIndex);
+        }, 5000); // Change every 5 seconds
+    } else {
+        testimonials.forEach(card => card.style.display = 'block');
+    }
+});
+
+document.querySelector('.hero-video').addEventListener('mouseover', () => video.pause());
+document.querySelector('.hero-video').addEventListener('mouseout', () => video.play());
+
