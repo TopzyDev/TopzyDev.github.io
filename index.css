@@ -1905,73 +1905,30 @@ footer {
 }
 .hero-content { z-index: 1; }
 
-/* Existing Testimonial Styles (Assumed Previous Content - Keep As Is) */
-/* Example placeholder - Replace with your actual previous styles */
-.section {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-#testimonials h2 {
-    font-size: 2.5em;
-    margin-bottom: 15px;
-}
-
-#testimonials p {
-    font-size: 1.2em;
-    margin-bottom: 25px;
-}
-
-.testimonial-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
+/* Enhanced Testimonial Color Animation Styles (No Movement) */
 .testimonial-card {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: left;
-}
-
-.testimonial-text {
-    font-style: italic;
-    margin-bottom: 10px;
-}
-
-.testimonial-author {
-    font-weight: 700;
-    margin-bottom: 5px;
-}
-
-.testimonial-role {
-    color: #666;
-}
-
-/* New Testimonial Color Animation Styles */
-.testimonial-card {
-    /* Glassy base with blue gradient */
-    background: linear-gradient(135deg, rgba(0, 123, 255, 0.1), rgba(0, 222, 235, 0.1));
-    backdrop-filter: blur(5px); /* Glassy effect */
-    border: 1px solid rgba(0, 123, 255, 0.2);
+    background: linear-gradient(135deg, rgba(0, 102, 204, 0.15), rgba(0, 191, 255, 0.15));
+    backdrop-filter: blur(8px); /* Glassy effect */
+    border: 1px solid rgba(0, 102, 204, 0.3);
     position: relative;
     overflow: hidden;
-    animation: shine 4s infinite, colorShift 6s infinite;
+    animation: colorShift 6s infinite ease-in-out; /* Color change only */
+    transition: transform 0.3s ease; /* Reactive hover effect */
+}
+
+.testimonial-card:hover {
+    transform: scale(1.05); /* Slight zoom on hover for reactivity */
 }
 
 .testimonial-card::before {
     content: '';
     position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(0, 123, 255, 0.3), transparent 70%);
-    animation: glow 8s infinite;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 191, 255, 0.4), transparent 70%);
+    opacity: 0.7; /* Static shine effect */
     z-index: 0;
 }
 
@@ -1981,26 +1938,14 @@ footer {
 }
 
 @keyframes colorShift {
-    0% { background: linear-gradient(135deg, rgba(0, 123, 255, 0.1), rgba(0, 222, 235, 0.1)); }
-    25% { background: linear-gradient(135deg, rgba(0, 191, 255, 0.1), rgba(0, 150, 199, 0.1)); }
-    50% { background: linear-gradient(135deg, rgba(0, 150, 199, 0.1), rgba(0, 100, 255, 0.1)); }
-    75% { background: linear-gradient(135deg, rgba(0, 100, 255, 0.1), rgba(0, 191, 255, 0.1)); }
-    100% { background: linear-gradient(135deg, rgba(0, 123, 255, 0.1), rgba(0, 222, 235, 0.1)); }
+    0% { background: linear-gradient(135deg, rgba(0, 102, 204, 0.15), rgba(0, 191, 255, 0.15)); }
+    25% { background: linear-gradient(135deg, rgba(0, 150, 255, 0.15), rgba(0, 222, 235, 0.15)); }
+    50% { background: linear-gradient(135deg, rgba(0, 191, 255, 0.15), rgba(0, 102, 204, 0.15)); }
+    75% { background: linear-gradient(135deg, rgba(0, 222, 235, 0.15), rgba(0, 150, 255, 0.15)); }
+    100% { background: linear-gradient(135deg, rgba(0, 102, 204, 0.15), rgba(0, 191, 255, 0.15)); }
 }
 
-@keyframes shine {
-    0% { transform: translate(0, 0); }
-    50% { transform: translate(50%, 50%); }
-    100% { transform: translate(0, 0); }
-}
-
-@keyframes glow {
-    0% { transform: scale(1); opacity: 0.5; }
-    50% { transform: scale(1.2); opacity: 0.8; }
-    100% { transform: scale(1); opacity: 0.5; }
-}
-
-/* Responsive Adjustments for Testimonial Cards */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
     .testimonial-card {
         width: 100%;
@@ -2013,6 +1958,3 @@ footer {
         max-width: 300px;
     }
 }
-
-/* Preserve Other Existing Styles (e.g., Hero, Navigation, etc.) */
-/* ... Keep your previous styles here ... */
