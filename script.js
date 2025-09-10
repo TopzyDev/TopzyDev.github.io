@@ -54,3 +54,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.querySelector('.hero-video').addEventListener('mouseover', () => video.pause());
 document.querySelector('.hero-video').addEventListener('mouseout', () => video.play());
+
+// Theme toggle logic
+    const themeToggle = document.querySelector('.theme-toggle');
+    const body = document.body;
+    let currentTheme = localStorage.getItem('theme') || 'light';
+
+    if (themeToggle) {
+        body.setAttribute('data-theme', currentTheme);
+        if (currentTheme === 'dark') {
+            themeToggle.querySelector('.fa-sun').style.display = 'none';
+            themeToggle.querySelector('.fa-moon').style.display = 'inline';
+        }
+
+        themeToggle.addEventListener('click', () => {
+            const newTheme = body.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+            body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+
+            if (newTheme === 'dark') {
+                themeToggle.querySelector('.fa-sun').style.display = 'none';
+                themeToggle.querySelector('.fa-moon').style.display = 'inline';
+            } else {
+                themeToggle.querySelector('.fa-sun').style.display = 'inline';
+                themeToggle.querySelector('.fa-moon').style.display = 'none';
+            }
+        });
+    }
+});
